@@ -174,6 +174,14 @@ EOF
 
         rm -rf $td
     fi
+
+    cd crates
+
+    cd docker_context
+    cross build --target $TARGET
+    cd ..
+
+    cd ..
 }
 
 cross_run() {
